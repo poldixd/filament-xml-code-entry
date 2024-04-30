@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "scripts": {
+    "dev:styles": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/filament-xml-code-entry.css --postcss --watch",
+    "dev:scripts": "esbuild resources/js/plugin.js --bundle --sourcemap=inline --outfile=resources/dist/filament-xml-code-entry.js --watch",
+    "build:styles": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/filament-xml-code-entry.css --postcss --minify && npm run purge",
+    "build:scripts": "esbuild resources/js/plugin.js \"--external:shiki/wasm\" --bundle --minify --outfile=resources/dist/filament-xml-code-entry.js",
+    "purge": "filament-purge -i resources/dist/filament-xml-code-entry.css -o resources/dist/filament-xml-code-entry.css",
+    "dev": "npm-run-all --parallel dev:*",
+    "build": "npm-run-all build:*"
+  },
+  "devDependencies": {
+    "@awcodes/filament-plugin-purge": "^1.0.2",
+    "@codemirror/lang-xml": "^6.1.0",
+    "@codemirror/view": "^6.26.3",
+    "autoprefixer": "^10.4.7",
+    "codemirror": "^6.0.1",
+    "esbuild": "^0.8.57",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.1.6"
+  }
+}
