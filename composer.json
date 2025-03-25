@@ -22,7 +22,6 @@
   },
   "require-dev": {
     "filament/filament": "^3.3",
-    "larastan/larastan": "^2.9",
     "laravel/pint": "^1.14",
     "orchestra/testbench": "^8.0|^9.0|^10.0",
     "pestphp/pest": "^2|^3",
