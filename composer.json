@@ -1,6 +1,7 @@
 {
   "name": "poldixd/filament-xml-code-entry",
   "description": "Filament XML Code Entry for Infolist",
+  "abandoned": true,
   "keywords": [
     "poldixd",
     "laravel",
